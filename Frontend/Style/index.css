@@ -1,0 +1,296 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#child1{
+    height: 4vh;
+    width: 100%;
+    background-color: #ECEFF1;
+    border: 1px solid grey;
+     padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#child1 a{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(41, 38, 38);
+    font-size: 18px;
+}
+#child1 div p{
+    font-size: 17px;
+    
+}
+#all{
+    margin-right: 30px;
+}
+#child2{
+    display: flex;
+    border: 0.5px solid grey;
+}
+#child2 img{
+    margin: 10px;
+    width: 30vh;
+    height: 15vh;
+}
+#allcategory{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    color: rgb(41, 38, 38);
+}
+#allcategory div p{
+    font-size: 12px;
+}
+#search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search input{
+    height: 4vh;
+    width: 33vh;
+    border-radius: 10px;
+    border: 0.5px solid grey;
+}
+#search button{
+    height: 6vh;
+    background-color: white;
+}
+#child3{
+    text-align: center;
+    font-size: 18px;
+    color: #283593;
+    font-weight: bold;
+}
+#child3 div{
+    height: 13px
+}
+
+#image1 img{
+    position: relative;
+    height: 30%;
+    width: 100%;
+}
+#image1 div{
+    position: absolute;
+    top: 300px;
+    right: 8%
+}
+#p1{
+    font-size: 5vh;
+    height: 0px;
+    color: #03A9F4;
+    margin-left: 25%;
+    font-weight: 600;
+}
+#p2{
+    margin-top: 0px;
+    font-size: 25vh;
+    color: #03A9F4;
+    font-weight: 400;
+}
+#span1{
+    margin-top: 0px;
+    font-size: 10vh;
+    color: #03A9F4;
+    font-weight: 600;
+}
+#p3{
+    margin-top: 0px;
+    font-size: 7vh;
+    color:#03A9F4;
+    font-weight: 600;
+}
+#p4{
+    font-size: 5vh;
+    font-weight: 400;
+    margin-left: 10%;
+    color: rgb(65, 58, 58);
+}
+
+#category-btn{
+    margin-top: 0px;
+    height: 80px;
+    width: auto;
+    background-color: #E3F2FD;
+    padding-left: 10%;
+    padding-top: 15px;
+}
+#category-btn button{
+     height: 40px;
+     width: 170px;
+     margin-left: 10px;
+     background-color: white;
+     font-size: 17px;
+    border: 1px solid black;
+}
+#special-btn{
+    margin-top: 0px;
+    height: 80px;
+    width: auto;
+    padding-left: 25%;
+    padding-top: 15px;
+}
+#special-btn button{
+    height: 40px;
+    width: 210px;
+    margin-left: 10px;
+    background-color: white;
+    font-size: 17px;
+   border: 1px solid black;
+}
+#category-image{
+    display: flex;
+    justify-content: space-evenly;
+    height: 250px;
+    margin-top: 10px;
+}
+
+#category-image img{
+    margin-left: 10px;
+    height: 200px;
+    width: 200px;
+}
+#category-image a{
+    color: #283593;
+    margin-left: 25%;
+}
+#valentine img{
+    position: relative;
+    height: 10%;
+    width: 100%;
+}
+#valentine div{
+    position: absolute;
+    top: 190%;
+    right: 2%
+}
+#p11{
+    font-size: 4vh;
+    height: 0px;
+    margin-left: 25%;
+    color:#03A9F4;
+    font-weight: 100;
+}
+#p21{
+    margin-top: 0px;
+    font-size: 15vh;
+    color: #03A9F4;
+    font-weight: 400;
+}
+#p31{
+    margin-top: 0px;
+    font-size: 6vh;
+    color: gray;
+    font-weight: 600;
+}
+#p41{
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 20%;
+    color: rgb(65, 58, 58);
+}
+#bold img{
+    height: 8%;
+    width: 100%;
+    position: relative;
+}
+#bold div{
+    position: absolute;
+    top: 270%;
+    right: 40%;
+}
+#dollar{
+    font-size: 6vh;
+    height: 0px;
+    color:#03A9F4;
+    font-weight:900;
+    margin-left: 10%;
+}
+#six{
+    font-size: 20vh;
+    color:#03A9F4;
+    font-weight:900;
+    margin-top: 30%;
+}
+#door{
+    margin-top: 0px;
+    font-size: 4vh;
+    font-weight: 400;
+    color:#03A9F4;
+    margin-left: 10%;
+}
+#p13{
+    margin-top: 0px;
+    font-size: 5vh;
+    font-weight: 400;
+    color:rgb(65, 58, 58) ;
+}
+#p23{
+    font-size: 2.5vh;
+    font-weight: 600;
+    color:rgb(65, 58, 58) ;
+    margin-left: 10%;
+}
+#holiday img{
+    height: 10%;
+    width: 100%;
+}
+#discount{
+    display: flex;
+    justify-content: space-evenly;
+}
+#discount img{
+    height: 200px;
+    width: 200px;
+}
+#service{
+    display: flex;
+    margin-top: 30px;
+}
+#service img{
+    width: 25%
+}
+#products h1{
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(65, 58, 58);
+}
+#first-five{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 5%;
+    width: 90%;
+}
+#first-five div{
+    width: 17%;
+}
+#first-five img{
+    height: 200px;
+    width: 200px;
+}
+#price{
+     display: flex;
+     justify-content: space-between;
+}
+#price button{
+    margin-left: 300%;
+    border: none;
+    background-color: white;
+    font-size: 25px;
+}
+#mrp{
+    margin-top: 0px;
+    text-decoration: line-through;
+}
+#first-five p{
+    font-size: 17px;
+    color: rgb(65, 58, 58);
+}
+#first-five hr{
+    border: 1px dashed grey;
+}
