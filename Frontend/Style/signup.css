@@ -1,0 +1,59 @@
+#container{
+    width: 60%;
+    margin: auto;
+}
+#container h2{
+    font-size:19px;
+    color: #444;
+}
+#fname{
+    height: 40px;
+    width: 40%;
+    margin: 20px 0px 30px 20px;
+    font-size: 17px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+}
+#lname{
+    height: 40px;
+    width: 40%;
+    margin: 20px 0px 30px 20px;
+    font-size: 17px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+}
+#email{
+    height: 40px;
+    width: 40%;
+    margin: 20px 0px 30px 20px;
+    font-size: 17px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+}
+#pass{
+     margin: 20px 0px 30px 20px;
+    height: 40px;
+    width: 40%;
+    font-size: 17px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+}
+#cnf{
+    margin: 20px 0px 30px 46%;
+    height: 40px;
+    width: 40%;
+    font-size: 17px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+}
+
+#submit{
+    margin:10px 0px 3% 32%;
+    height: 40px;
+    width: 29%;
+    background-color:#00a8e2;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+}
