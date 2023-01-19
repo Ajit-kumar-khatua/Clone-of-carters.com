@@ -1,4 +1,4 @@
-let token=true
+let token=localStorage.getItem("name")
 let child1 = document.getElementById("child1")
 let child2 = document.getElementById("child2")
 
@@ -14,7 +14,7 @@ function navbar() {
             <a>Free shopping on $35+ Orders</a>
         </div>
         <div id="all">
-            <a href="#"><i class="fa-solid fa-circle-user"></i></i> Hi,Ajit</a>
+            <a href="#"><i class="fa-solid fa-circle-user"></i></i> Hi,${token}</a>
             <a href="#"><i class="fa-regular fa-heart"></i> Hearts</a>
             <a href="#"><i class="fa-solid fa-box"></i> Orders</a>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -31,7 +31,7 @@ function navbar() {
             <a>Free shopping on $35+ Orders</a>
         </div>
         <div id="all">
-            <a href="#"><i class="fa-solid fa-user"></i> Sign in</a>
+            <a href="./login.html"><i class="fa-solid fa-user"></i> Sign in</a>
             <a href="#"><i class="fa-regular fa-heart"></i> Hearts</a>
             <a href="#"><i class="fa-solid fa-box"></i> Orders</a>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -40,7 +40,7 @@ function navbar() {
 
     child2.innerHTML=`
             <div>
-                <a href="#"><img src="./media/Baby's (2).png" alt=""></a>
+                <a href="./index.html"><img src="./media/Baby's (2).png" alt=""></a>
             </div>
             <div id="allcategory">
                 <div>
@@ -87,21 +87,7 @@ products()
 
 function display(data){
     let products=document.getElementById("first-five")
-   
-        // for(let i=0;i<5;i++){
-        //     let div=document.createElement("div")
-        //     let img=document.createElement("img")
-        //      img.src=data[i].image1
-        //      let div2=document.createElement("div")
-        //      let div3=document.createElement("div")
-        //      let price=document.createElement("h3")
-        //        price.innerText=data[i].price
-
-
-
-        //     div.append(img,price)
-        //     products.append(div)
-        // }
+    let end=document.getElementById("second-five")
         let bag=[]
         for(let i=0;i<5;i++){
             bag.push(data[i])
@@ -125,10 +111,36 @@ function display(data){
          })}
         `
        
+        let bag2=[]
+        for(let i=10;i<15;i++){
+            bag2.push(data[i])
+        }
+      
+        end.innerHTML=`
+        ${bag2.map((item)=>{
+             return `
+               <div>
+                   <img src="${item.image1}" alt="">
+                   <hr>
+                   <div id="price">
+                       <h3>${item.price}</h3>
+                       <button><i class="fa-regular fa-heart"></i></button>
+                   </div>
+                   <p id="mrp">${item.MRP}</p>
+                   <p>${item.name}</p>
+                   <p>${item.productfor}</p>
+               </div>
+             `
+        })}
+       `
     
 }
 
 
+
+
+
+export default navbar()
 
 // <div>
 // <h3>${item.price}</h3>

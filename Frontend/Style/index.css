@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: Poppins-Semibold,sans-serif;
 }
 #child1{
     height: 4vh;
@@ -17,7 +18,7 @@ body{
     margin-right: 10px;
     text-decoration: none;
     color: rgb(41, 38, 38);
-    font-size: 18px;
+    font-size: 15px;
 }
 #child1 div p{
     font-size: 17px;
@@ -44,6 +45,9 @@ body{
 }
 #allcategory div p{
     font-size: 12px;
+}
+#allcategory div h3{
+    color: #444;
 }
 #search{
     display: flex;
@@ -244,6 +248,12 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
+#faves{
+    text-align: center;
+    font-size: 7vh;
+    font-weight: 600;
+    color:#03A9F4;
+}
 #discount img{
     height: 200px;
     width: 200px;
@@ -259,17 +269,34 @@ body{
     margin-top: 10px;
     text-align: center;
     color: rgb(65, 58, 58);
+    margin-top: 30px;
+    font-size: 15x;
 }
 #first-five{
     display: flex;
     justify-content: space-evenly;
     margin-left: 5%;
     width: 90%;
+    margin-top: 20px;
+}
+#second-five{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 20px;
 }
 #first-five div{
     width: 17%;
 }
+#second-five div{
+    width: 17%;
+}
 #first-five img{
+    height: 200px;
+    width: 200px;
+}
+#second-five img{
     height: 200px;
     width: 200px;
 }
@@ -293,4 +320,40 @@ body{
 }
 #first-five hr{
     border: 1px dashed grey;
+}
+#second-five p{
+    font-size: 17px;
+    color: rgb(65, 58, 58);
+}
+#second-five hr{
+    border: 1px dashed grey;
+}
+
+#show{
+    text-align: center;
+    margin-top: 5%;
+}
+#show-you{
+    color: #1A237E;
+    font-size: 7vh;
+    font-weight: 500;
+}
+#love{
+    color:#1976D2;
+    margin-top: 0px;
+    font-size: 7vh;
+    font-weight: 500;
+
+}
+#para{
+    font-size: 25px;
+}
+#love-ones{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+#love-ones img{
+    height: 20%;
+    width: 24.8%;
 }

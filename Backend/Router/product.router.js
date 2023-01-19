@@ -12,6 +12,18 @@ productRouter.get("/",async(req,res)=>{
         console.log(error);
      }
 })
+productRouter.get("/:productfor",async (req,res)=>{
+    let product=req.params.productfor
+    try {
+        let products=await ProductModel.find({
+            productfor:{$regex : `${product}`,$options: "i"}
+        })
+        res.send(products)
+        
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 productRouter.post("/add",async (req,res)=>{
     let payload=req.body

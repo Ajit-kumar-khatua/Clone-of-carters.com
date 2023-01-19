@@ -1,0 +1,61 @@
+body{
+    font-family: Poppins-Semibold,sans-serif;
+}
+#container{
+    height: 60vh;
+    width: 70%;
+    margin: auto;
+}
+h2{
+    font-size: 1.375rem;
+    font-family: Poppins-Semibold,sans-serif;
+    font-weight: 200;
+    color: rgb(36, 35, 35);
+}
+#email{
+    height: 40px;
+    width: 40%;
+    margin-left: 20px;
+    font-size: 17px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+}
+#pass{
+    margin-left: 30px;
+    height: 40px;
+    width: 40%;
+    font-size: 17px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+}
+#check{
+    margin: 40px 10px 10px 25px;
+    transform: scale(1.5);
+}
+label{
+    font-size: 13px;
+    color: rgb(36, 35, 35);
+}
+#submit{
+    margin:4% 0px 3% 32%;
+    height: 40px;
+    width: 29%;
+    background-color:#00a8e2;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+}
+p{
+    text-align: center;
+    font-style: italic;
+    color: #444;
+}
+button{
+    margin-left: 32%;
+    height: 40px;
+    width: 29%;
+    font-size: 17px;
+    background-color: white;
+    border: 1px solid gray;
+}
