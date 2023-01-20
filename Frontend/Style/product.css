@@ -25,7 +25,7 @@
     font-size: 13px;
 }
 #main{
-    height: 60vh;
+    height: auto;
     width: 100%;
     /* border: 1px solid red; */
     display: flex;
@@ -95,6 +95,14 @@
     border: 1px solid #00a8e2;
     width: 40%;
 }
-#footer{
-    margin-top: 55%;
+
+
+#add{
+    height: 30px;
+    width: 150px;
+    margin: 20px 0px 10px 30px;
+    background-color:#00a8e2 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

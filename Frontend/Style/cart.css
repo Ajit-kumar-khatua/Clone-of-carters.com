@@ -1,0 +1,143 @@
+
+#body{
+    height: auto;
+    width: 80%;
+    margin: auto;
+}
+#one-line{
+    text-align: center;
+}
+#body p a{
+    color: #00a8e2;
+    text-decoration: none;
+}
+#body h3{
+     color: #444;
+     font-family: Poppins,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#body h4{
+    color: #444;
+    font-family: Poppins,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+button:hover{
+    cursor: pointer;
+}
+#left{
+    width:65% ;
+    height: 100%;
+}
+#one-cart{
+    height: auto;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#one-cart img{
+    height: 100%;
+    width: 15%;
+}
+#desc{
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+#desc span:nth-child(1){
+    font-size: 12px;
+
+}
+#desc span:nth-child(3){
+    font-size: 19px;
+    font-style: inherit;
+    font-weight: inherit;
+    color: #444;
+    font-family: Poppins,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#desc span:nth-child(5),#desc span:nth-child(7){
+    font-size: 12px;
+    font-style: inherit;
+    font-weight: inherit;
+    color: #444;
+    font-family: Poppins,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#quant{
+    width: 200px;
+    margin-top: 50px;
+}
+#remove{
+    margin: 20px 0px 0px 20px;
+}
+#remove span:nth-child(1){
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+#remove span:nth-child(3){
+    font-size: 12px;
+    margin-left: 40px;
+    text-decoration: line-through;
+}
+#remove-btn{
+    font-size: 13px;
+    color: #00a8e2;
+    border: none;
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+#right{
+    width: 33%;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /* border: 1px solid blue; */
+}
+
+.order-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-details p{
+    margin: 10px 10px 10px 10px;
+    font-size: 15px;
+    font-style: inherit;
+    font-weight: bold;
+    color: #444;
+    font-family: Poppins,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#checkout-btn{
+    height: 30px;
+    width: 90%;
+    background-color: #00a8e2;
+    border: none;
+    margin-left: 30px;
+    margin-top: 50px;
+    color: white;
+    font-size: 19px;
+}
+.fa-lock{
+    font-size: 12px;
+}
+#promo{
+    height: 60px;
+    width: 230px;
+    border: none;
+    margin-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+#apply-promo{
+    height: 40px;
+    width: 70px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 15px;
+}
+
