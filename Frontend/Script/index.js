@@ -1,4 +1,5 @@
-let token=localStorage.getItem("name")
+let name=localStorage.getItem("name")
+let token=localStorage.getItem("token")
 let child1 = document.getElementById("child1")
 let child2 = document.getElementById("child2")
 
@@ -14,10 +15,10 @@ function navbar() {
             <a>Free shopping on $35+ Orders</a>
         </div>
         <div id="all">
-            <a href="#"><i class="fa-solid fa-circle-user"></i></i> Hi,${token}</a>
+            <a href="#"><i class="fa-solid fa-circle-user"></i></i> Hi,${name}</a>
             <a href="#"><i class="fa-regular fa-heart"></i> Hearts</a>
             <a href="#"><i class="fa-solid fa-box"></i> Orders</a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
         `
     }else{
@@ -34,7 +35,7 @@ function navbar() {
             <a href="./login.html"><i class="fa-solid fa-user"></i> Sign in</a>
             <a href="#"><i class="fa-regular fa-heart"></i> Hearts</a>
             <a href="#"><i class="fa-solid fa-box"></i> Orders</a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="./login.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>    `
     }
 

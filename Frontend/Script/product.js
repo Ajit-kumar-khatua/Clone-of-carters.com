@@ -1,7 +1,7 @@
 import navbar from "./index.js"
 
 let baseURL="http://localhost:8080"
-
+let token=localStorage.getItem("token")
 
 
 async function alldata(){
@@ -19,8 +19,6 @@ alldata()
 
 function display(data){
     let products=document.getElementById("allProducts")
-       
-     
     products.innerHTML=`
          ${data.map((item)=>{
               return `
@@ -33,13 +31,20 @@ function display(data){
                     </div>
                     <p id="mrp">${item.MRP}</p>
                     <p>${item.name}</p>
+                    <p>Size- ${item.size}</p>
                     <p>Baby's Fashion | ${item.productfor}</p>
-                    <button  onclick="sub()" id="new">New Arrival</button>
+                    <button data-id=${item._id} id="add">Add to Cart</button>
                 </div>
               `
          }).join("")}
         `   
-       
+    let addToCartBtns=document.querySelectorAll("#add")
+     for(let addToCartBtn of addToCartBtns){
+        addToCartBtn.addEventListener("click",(event)=>{
+            let id=event.target.dataset.id
+            cartItem(id)
+        })
+     }
        
 }
 
@@ -64,7 +69,37 @@ function sortedData(data){
     
 }
 
+async function cartItem(id){
+    try {
+        let res=await fetch(`${baseURL}/products/one/${id}`)
+        let data=await res.json()
+       let {name,image1,price,MRP,size,color}=data
 
-let pro=document.getElementById("product-child")
-console.log(pro)
+       let obj={name,image1,price,MRP,size,color,quantity:1}
 
+       addedToCart(obj)
+     
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+async function  addedToCart(obj){
+    try {
+        let res=await fetch(`${baseURL}/products/cart`,{
+            method:"POST",
+            body:JSON.stringify(obj),
+            headers:{
+                "Authorization":token,
+                "Content-Type":"Application/json"
+            }
+        })
+        let data=await res.json()
+       alert(data.msg)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+/* <button id="new">New Arrival</button> */
