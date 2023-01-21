@@ -41,7 +41,18 @@ productRouter.delete("/cart/delete/:id", async (req,res)=>{
     }
 })
 
- 
+productRouter.delete("/cart/userid/delete", async (req,res)=>{
+    const token=req.headers.authorization
+    const decoded=jwt.verify(token,process.env.key)
+    const userID=decoded.userID
+    try {
+        let data=await CartModel.deleteMany({userID:userID})
+        res.send({"msg":"Cart Item Deleted"})
+    } catch (error) {
+        console.log(error)
+    }
+})
+
  productRouter.get("/cart/one/:id",async (req,res)=>{
     let id=req.params.id
     try {
@@ -67,6 +78,18 @@ productRouter.get("/:productfor",async (req,res)=>{
     try {
         let products=await ProductModel.find({
             productfor:{$regex : `${product}`,$options: "i"}
+        })
+        res.send(products)
+        
+    } catch (error) {
+        console.log(error)
+    }
+})
+productRouter.get("/search/:productfor",async (req,res)=>{
+    let product=req.params.productfor
+    try {
+        let products=await ProductModel.find({
+            name:{$regex : `${product}`,$options: "i"}
         })
         res.send(products)
         

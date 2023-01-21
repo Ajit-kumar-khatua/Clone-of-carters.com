@@ -17,7 +17,7 @@ function navbar() {
         <div id="all">
             <a href="#"><i class="fa-solid fa-circle-user"></i></i> Hi,${name}</a>
             <a href="#"><i class="fa-regular fa-heart"></i> Hearts</a>
-            <a href="#"><i class="fa-solid fa-box"></i> Orders</a>
+            <a href="./orderpage.html"><i class="fa-solid fa-box"></i> Orders</a>
             <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
         `
@@ -34,7 +34,7 @@ function navbar() {
         <div id="all">
             <a href="./login.html"><i class="fa-solid fa-user"></i> Sign in</a>
             <a href="#"><i class="fa-regular fa-heart"></i> Hearts</a>
-            <a href="#"><i class="fa-solid fa-box"></i> Orders</a>
+            <a href="./login.html"><i class="fa-solid fa-box"></i> Orders</a>
             <a href="./login.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>    `
     }
@@ -66,10 +66,19 @@ function navbar() {
                 
             </div>
             <div id="search">
-                <input type="text" placeholder="Find Your Product">
-                <button style="border: none;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" id="searchbox" placeholder="Find Your Product">
+                <button id="searchbtn" style="border: none;"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         `
+       
+        let searchBtn=document.getElementById("searchbtn")
+        searchBtn.addEventListener("click",()=>{
+            let serachData=document.getElementById("searchbox").value;
+
+            sessionStorage.setItem("searchData",serachData)
+            window.location.href="./searchpage.html"
+        })
+       
 }
 navbar()
 
@@ -138,16 +147,5 @@ function display(data){
 }
 
 
-
-
-
 export default navbar()
 
-// <div>
-// <h3>${item.price}</h3>
-// <p>${item.MRP}</p>
-// </div>
-// <div>
-//  <button><i class="fa-regular fa-heart"></i>Heart</button>
-// </div> 
- 

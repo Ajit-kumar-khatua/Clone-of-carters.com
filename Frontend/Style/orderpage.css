@@ -1,0 +1,75 @@
+#cont{
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+h3{
+    color: #444;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#left{
+    width:90% ;
+    height: 100%;
+    margin-top: 80px;
+}
+#one-cart{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#one-cart img{
+    height: 100%;
+    width: 15%;
+}
+#desc{
+    width: 300px;
+    margin-left: 30px;
+    margin-top: 5%;
+}
+#desc span:nth-child(1){
+    font-size: 12px;
+
+}
+#desc span:nth-child(3){
+    font-size: 19px;
+    font-style: inherit;
+    font-weight: inherit;
+    color: #444;
+    font-family: Poppins,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#desc span:nth-child(5),#desc span:nth-child(7){
+    font-size: 12px;
+    font-style: inherit;
+    font-weight: inherit;
+    color: #444;
+    font-family: Poppins,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+#quant{
+    width: 200px;
+    margin-top: 10%;
+    margin-left: 30px;
+    color: black;
+    font-weight: bold;
+}
+#remove{
+    margin: 20px 0px 0px 10%;
+}
+#remove span:nth-child(1){
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+#remove-btn{
+    font-size: 13px;
+    color: #00a8e2;
+    border: none;
+    background-color: white;
+    padding-bottom: 30px;
+    margin-top: 100px;
+    margin-left: 20px;
+}
