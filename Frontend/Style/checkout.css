@@ -1,0 +1,61 @@
+
+#checkout-body{
+    width: 70%;
+    margin: auto;
+}
+form{
+    margin-top: 60px;
+    margin-left: 50px;
+}
+#checkout-body>h2{
+    color: #444;
+    font-size: 16px;
+}
+
+#checkout-body>form>input:nth-child(1),#checkout-body>form>input:nth-child(3){
+    height: 40px;
+    width: 50%;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+#checkout-body>form>input:nth-child(6){
+    width: 20%;
+    height: 40px; 
+    margin-left: 70px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+#checkout-body>form>input:nth-child(8){
+    width: 110px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+#checkout-body>form>input[type="submit"]{
+    height: 40px;
+    width: 30%;
+    background-color:#00a8e2;
+    color: white;
+    border: none;
+    margin-top: 16px;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+span{
+    margin-left: 30px;
+}

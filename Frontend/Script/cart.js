@@ -17,8 +17,13 @@ async function cartData() {
             }
         })
         let data = await res.json()
-        displayCart(data)
-         displayCheckout(data)
+        if(data.length!=0){
+            displayCart(data)
+            displayCheckout(data)
+        }else{
+            displayEmpty()
+        }
+        
     } catch (error) {
         console.log(error)
     }
@@ -186,3 +191,18 @@ async function deleteCart(id){
     }
 }
 
+
+let checkoutBtn=document.getElementById("checkout-btn")
+
+checkoutBtn.addEventListener("click",()=>{
+   window.location.href="./checkout.html"
+})
+
+
+function displayEmpty(){
+    let leftSide=document.getElementById("left")
+    leftSide.innerHTML=`
+       <img src="./media/empty-cart.png" alt="">
+
+    `
+}

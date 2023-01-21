@@ -357,3 +357,8 @@ body{
     height: 20%;
     width: 24.8%;
 }
+
+button a{
+    text-decoration: none;
+    color: #444;
+}

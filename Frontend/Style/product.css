@@ -24,6 +24,12 @@
 #stock-line{
     font-size: 13px;
 }
+#no-res{
+    margin-left: 80px;
+    color: #444;
+    font-size: 30px;
+    
+}
 #main{
     height: auto;
     width: 100%;
@@ -106,3 +112,4 @@
     border: none;
     border-radius: 5px;
 }
+
