@@ -1,5 +1,5 @@
 import navbar from "./index.js"
-let baseURL = "http://localhost:8080"
+let baseURL = "https://dark-cyan-fish-yoke.cyclic.app"
 let token = localStorage.getItem("token")
 let name=localStorage.getItem("name")
 
@@ -22,6 +22,7 @@ async function cartData() {
             displayCheckout(data)
         }else{
             displayEmpty()
+            displayCheckoutEmpty()
         }
         
     } catch (error) {
@@ -99,9 +100,17 @@ function displayCheckout(data){
         total+= price
     })
     let totalPrice=document.getElementById("total-price")
-    totalPrice.innerText=`$${total}`
+    totalPrice.innerText=`$${total}.00`
     let ordertotal=document.getElementById("order-total")
-    ordertotal.innerText=`$${total+6}`
+    ordertotal.innerText=`$${total+6}.00`
+}
+
+function displayCheckoutEmpty(){
+    let total=0;
+    let totalPrice=document.getElementById("total-price")
+    totalPrice.innerText=`$${total}.00`
+    let ordertotal=document.getElementById("order-total")
+    ordertotal.innerText=`$${total}.00`
 }
 
 async function upadteQuantity(id){

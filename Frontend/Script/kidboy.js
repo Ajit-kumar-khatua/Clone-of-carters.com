@@ -1,12 +1,12 @@
 import navbar from "./index.js"
 
-let baseURL="http://localhost:8080"
+let baseURL="https://dark-cyan-fish-yoke.cyclic.app"
 let token=localStorage.getItem("token")
 
 
 async function alldata(){
     try {
-        let res= await fetch(`${baseURL}/products/kid boy`)
+        let res= await fetch(`${baseURL}/products/kids boy`)
         let data=await res.json()
         display(data)
         sortedData(data)
@@ -41,8 +41,13 @@ function display(data){
     let addToCartBtns=document.querySelectorAll("#add")
      for(let addToCartBtn of addToCartBtns){
         addToCartBtn.addEventListener("click",(event)=>{
-            let id=event.target.dataset.id
-            cartItem(id)
+            if(token){
+                let id=event.target.dataset.id
+                cartItem(id)
+            }else{
+                alert("Please Login")
+                window.location.href="./login.html"
+            }
         })
      }
        

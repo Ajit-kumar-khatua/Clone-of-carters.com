@@ -1,5 +1,5 @@
 import navbar from "./index.js"
-let baseURL="http://localhost:8080"
+let baseURL="https://dark-cyan-fish-yoke.cyclic.app"
 
 let loginform=document.getElementById("login")
 
@@ -18,14 +18,17 @@ loginform.addEventListener("submit",(event)=>{
                     "Content-Type":"Application/json"
                 }
             })
-            let data=await res.json()
-            let token=data.token
-            localStorage.setItem("token",token)
-            let name=data.name;
-            localStorage.setItem("name",name)
-            alert(data.msg)
-            window.location.href="./index.html"
-            
+                let data=await res.json()               
+                alert(data.msg)
+                if(data.msg=="Wrong Credentials"){
+                    window.location.href="./login.html"
+                }else{
+                    let token=data.token
+                    localStorage.setItem("token",token)
+                    let name=data.name;
+                    localStorage.setItem("name",name)
+                    window.location.href="./index.html"
+                }   
          } catch (error) {
             console.log(error)
          }

@@ -1,7 +1,7 @@
 import navbar from "./index.js"
 
 let token=localStorage.getItem("token")
-let baseURL = "http://localhost:8080"
+let baseURL = "https://dark-cyan-fish-yoke.cyclic.app"
 
 let cardNumber="123456789"
 let date="2024-01-01"

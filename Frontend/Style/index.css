@@ -362,3 +362,6 @@ button a{
     text-decoration: none;
     color: #444;
 }
+#footer img{
+    width: 100%;
+}

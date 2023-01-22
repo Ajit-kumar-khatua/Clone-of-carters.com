@@ -1,6 +1,6 @@
  import navbar from "./index.js"
 
- let baseURL = "http://localhost:8080"
+ let baseURL = "https://dark-cyan-fish-yoke.cyclic.app"
  let token=localStorage.getItem("token")
 
  async function orderData(){
@@ -74,7 +74,7 @@
         total+= price
     })
     let totalPrice=document.getElementById("total-price")
-    totalPrice.innerText=`Total Price : $${total}`
+    totalPrice.innerText=`Total Price : $${total}.00`
 }
 
 
