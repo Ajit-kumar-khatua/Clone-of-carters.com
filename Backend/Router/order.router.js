@@ -21,6 +21,15 @@ orderRouter.get("/", authenticate,async (req,res)=>{
     }
 })
 
+orderRouter.get("/all",async (req,res)=>{
+    try {
+        let allOrderedData=await OrderModel.find()
+        res.send(allOrderedData)
+        
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 orderRouter.post("/add",orderauthenticate, async (req,res)=>{
     let payload=req.body
@@ -31,6 +40,17 @@ orderRouter.post("/add",orderauthenticate, async (req,res)=>{
    } catch (error) {
     
    }
+})
+
+orderRouter.patch("/update/:id", async (req,res)=>{
+    let id=req.params.id
+    let payload=req.body
+    try {
+        let data=await OrderModel.findByIdAndUpdate({_id:id},payload)
+        res.send({"msg":"Item Updated"})
+    } catch (error) {
+        console.log(error)
+    }
 })
 
 orderRouter.delete("/delete/:id", async (req,res)=>{
