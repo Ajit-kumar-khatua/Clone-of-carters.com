@@ -84,7 +84,7 @@ navbar()
 
 async function products(){
      try {
-        let res= await fetch("http://localhost:8080/products")
+        let res= await fetch("https://dark-cyan-fish-yoke.cyclic.app/products")
         let data=await res.json()
         console.log(data)
         display(data)
