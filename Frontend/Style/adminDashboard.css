@@ -176,6 +176,9 @@ body{
 #edit-products{
     display: none;
 }
+#show-orders{
+    display: none;
+}
 #input-form input{
     /* margin-left: 30%; */
     margin: 20px 0px 0px 25%;

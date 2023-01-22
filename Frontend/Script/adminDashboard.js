@@ -6,13 +6,12 @@ let addProductsbtn=document.getElementById("addProduct")
 let addproducts=document.getElementById("add-products")
 let editProducts=document.querySelector("#edit-products")
 let logoutnBtn=document.getElementById("logout")
+let allorders=document.getElementById("show-orders")
 logoutnBtn.addEventListener("click",function(){
     window.location.href="index.html"
 })
 let userBtn=document.getElementById("user")
-userBtn.addEventListener("click",function(){
-   window.location.href="userdata.html"
-})
+
 
 let baseURL = "http://localhost:8080"
 let token = localStorage.getItem("token")
@@ -28,6 +27,7 @@ showProductsBtn.addEventListener("click",async function(){
             allProducts.style.display="block"
             addproducts.style.display="none"
             editProducts.style.display="none"
+            allorders.style.display="none"
             display(data)
             sortedData(data)
             searchProducts(data)
@@ -66,6 +66,7 @@ function display(data){
             allProducts.style.display="none"
             addproducts.style.display="none"
             editProducts.style.display="block"
+            allorders.style.display="none"
             let id=event.target.dataset.id;
             editItem(id)
         })
@@ -130,6 +131,7 @@ addProductsbtn.addEventListener("click",function(){
     allProducts.style.display="none"
     addproducts.style.display="block";
     editProducts.style.display="none"  
+    allorders.style.display="none"
     let formofinputs=document.querySelector("#input-form")
     formofinputs.addEventListener("submit",async function(event){
         event.preventDefault();
@@ -203,4 +205,80 @@ async function editItem(id){
     })
 }
 
+let orderBtn=document.getElementById("orders")
+orderBtn.addEventListener("click",()=>{
+      allProducts.style.display="none"
+      addproducts.style.display="none"
+      editProducts.style.display="none"
+      allorders.style.display="block"
+    
+    allOrders()
+    
+})
 
+async function  allOrders(){
+    try {
+        let res=await fetch(`${baseURL}/order/all`)
+        let data=await res.json()
+        displayOrders(data)
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+function displayOrders(data){
+    allorders.innerHTML=`
+    <h1>All Orders</h1>
+       ${data.map((item)=>{
+         return `<div>
+                <h3>OrderId:- ${item._id}</h3>
+                <p>Name:${item.name}</p>
+                <p>Status:- ${item.status}</p>
+                <br>
+                <span>Change Status:-</span>
+                <select name="" data-id="${item._id}" id="status">
+                    <option value="">Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Delivered">Delivered</option>
+                </select>
+                <p>Quantity:-${item.quantity}</p>
+               </div>
+               <hr>
+            `
+       }).join("")}
+    `
+
+    let statuses=document.querySelectorAll("#status")
+    for(let status of statuses){
+        status.addEventListener("change",(e)=>{
+            let id=e.target.dataset.id
+            let value=status.value
+            updateStatus(id,value)
+        })
+    }
+   
+}
+
+async function updateStatus(id,value){
+    let obj={
+        status:value
+    }
+    try {
+        let res=await fetch(`${baseURL}/order/update/${id}`,{
+            method:"PATCH",
+            body:JSON.stringify(obj),
+            headers:{
+                "Content-Type":"Application/json"
+            }
+        })
+        let data=await res.json()
+        allOrders()
+        console.log(data)
+        
+    } catch (error) {
+        console.log(error)
+    }
+
+}

@@ -15,10 +15,10 @@ function navbar() {
             <a>Free shopping on $35+ Orders</a>
         </div>
         <div id="all">
-            <a href="#"><i class="fa-solid fa-circle-user"></i></i> Hi,${name}</a>
+            <a href="./profile.html"><i class="fa-solid fa-circle-user"></i></i> Hi,${name}</a>
             <a href="#"><i class="fa-regular fa-heart"></i> Hearts</a>
             <a href="./orderpage.html"><i class="fa-solid fa-box"></i> Orders</a>
-            <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a> 
         </div>
         `
     }else{
